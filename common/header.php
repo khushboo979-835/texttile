@@ -308,9 +308,8 @@
             </div>
 
             <!-- Right: Contact Details -->
-            <div class="col-md-3 text-md-end  fw-medium small border-start">
-
-                <i class="bi bi-telephone"></i> +91 9142569346 | <i class="bi bi-whatsapp"></i> +91 9142569346
+            <div class="col-md-3 text-md-end fw-medium small border-start">
+                <a href="tel:+919142569346" class="text-white text-decoration-none me-2"><i class="bi bi-telephone"></i> +91 9142569346</a> | <a href="https://api.whatsapp.com/send?phone=919142569346&text=Hello!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" class="text-white text-decoration-none ms-2"><i class="bi bi-whatsapp"></i> +91 9142569346</a>
             </div>
 
         </div>
@@ -325,34 +324,37 @@
                 <img src="<?php echo $base_url; ?>assets/images/logo/logo.png" alt="A&T Tensile Techworks Logo">
             </a>
 
-            <!-- Mobile Call Button -->
+            <!-- Mobile Call & WhatsApp Buttons -->
             <style>
                 .jelly-btn {
                     background: linear-gradient(135deg, #1e4b77, #1a3f63);
                     color: #fff !important;
                     border: 1px solid rgba(255,255,255,0.15);
                     border-radius: 30px;
-                    padding: 8px 24px;
+                    padding: 6px 14px;
                     font-weight: 700;
-                    font-size: 15px;
-                    letter-spacing: 0.5px;
+                    font-size: 13px;
+                    letter-spacing: 0.3px;
                     display: inline-flex;
                     align-items: center;
-                    gap: 6px;
+                    gap: 5px;
                     box-shadow: 
-                        0 8px 15px rgba(26, 63, 99, 0.4),
-                        inset 0 3px 5px rgba(255, 255, 255, 0.3),
-                        inset 0 -3px 5px rgba(0, 0, 0, 0.2);
+                        0 4px 10px rgba(26, 63, 99, 0.3),
+                        inset 0 2px 4px rgba(255, 255, 255, 0.3),
+                        inset 0 -2px 4px rgba(0, 0, 0, 0.2);
                     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
                     text-shadow: 0 1px 2px rgba(0,0,0,0.2);
                     text-decoration: none;
                 }
+                .jelly-btn.whatsapp-btn {
+                    background: linear-gradient(135deg, #25D366, #128C7E);
+                    box-shadow: 
+                        0 4px 10px rgba(37, 211, 102, 0.3),
+                        inset 0 2px 4px rgba(255, 255, 255, 0.3),
+                        inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+                }
                 .jelly-btn:active {
                     transform: scale(0.95);
-                    box-shadow: 
-                        0 3px 5px rgba(26, 63, 99, 0.4),
-                        inset 0 2px 3px rgba(0, 0, 0, 0.2),
-                        inset 0 -2px 3px rgba(255, 255, 255, 0.2);
                 }
                 .jelly-icon {
                     font-size: 13px;
@@ -369,9 +371,14 @@
                   100% { transform: rotate(0); }
                 }
             </style>
-            <a href="tel:+919142569346" class="btn d-lg-none mx-auto jelly-btn">
-                <i class="bi bi-telephone-fill jelly-icon"></i> 9142569346
-            </a>
+            <div class="d-flex align-items-center gap-2 d-lg-none mx-auto">
+                <a href="tel:+919142569346" class="btn jelly-btn">
+                    <i class="bi bi-telephone-fill jelly-icon"></i> Call
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=919142569346&text=Hello!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" class="btn jelly-btn whatsapp-btn">
+                    <i class="bi bi-whatsapp jelly-icon"></i> WhatsApp
+                </a>
+            </div>
 
             <!-- Custom Animated Hamburger Button -->
             <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas"
